@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="uk"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Чути — кабінет слуху · демо лендінг</title><meta name="description" content="Демо швидкого лендінгу: калькулятор, запис, дисклеймер. Не медична клініка."><link rel="icon" href="/chutyfavicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/chuty/_astro/index.C0-N3eKV.css"></head> <body class="antialiased">  <header class="sticky top-0 z-20 border-b border-line bg-paper/90 backdrop-blur-sm"> <div class="mx-auto flex max-w-5xl items-center justify-between px-5 py-3"> <a href="/chuty/" class="text-lg font-semibold tracking-tight">Чути</a> <nav class="hidden gap-6 text-sm text-muted sm:flex"> <a href="#calc" class="hover:text-ink">Калькулятор</a> <a href="#doctor" class="hover:text-ink">Лікар</a> <a href="#book" class="hover:text-ink">Запис</a> </nav> <a href="#book" class="rounded-full bg-leaf px-4 py-2 text-sm font-semibold text-white hover:bg-leaf-2">
+Записатись
+</a> </div> </header> <main> <section class="mx-auto grid max-w-5xl gap-10 px-5 py-16 sm:grid-cols-2 sm:items-center sm:py-20"> <div> <p class="text-xs font-semibold uppercase tracking-[0.18em] text-leaf">Демо · не клініка</p> <h1 class="mt-3 text-4xl font-semibold leading-[1.12] tracking-tight sm:text-5xl">
+Перевірка слуху. Апарат — і діагностика без доплати.
+</h1> <p class="mt-4 max-w-md text-muted">
+Лендінг під рекламу: швидка сторінка, калькулятор знижки, форма запису. Зібрано як навчальний кейс, не як кабінет лікаря.
+</p> <div class="mt-8 flex flex-wrap gap-3"> <a href="#calc" class="rounded-full bg-leaf px-5 py-3 text-sm font-semibold text-white hover:bg-leaf-2">
+Порахувати візит
+</a> <a href="#book" class="rounded-full border border-line px-5 py-3 text-sm font-semibold hover:border-ink">
+Залишити телефон
+</a> </div> </div> <div class="rounded-3xl border border-line bg-white p-6 shadow-[0_20px_50px_rgba(18,36,28,0.06)]"> <p class="text-sm text-muted">Приклад рахунку</p> <p class="mt-2 text-3xl font-semibold">0 грн за послуги</p> <p class="mt-1 text-sm text-muted">якщо в розрахунку є слуховий апарат</p> <ul class="mt-6 space-y-2 text-sm"> <li class="flex justify-between border-b border-line py-2"><span>Консультація</span><span>0 грн</span></li> <li class="flex justify-between border-b border-line py-2"><span>Аудіометрія</span><span>0 грн</span></li> <li class="flex justify-between py-2"><span>Апарат «День»</span><span>18 900 грн</span></li> </ul> </div> </section> <section id="calc" class="border-t border-line bg-white"> <div class="mx-auto max-w-5xl px-5 py-16"> <p class="text-xs font-semibold uppercase tracking-[0.18em] text-leaf">Калькулятор</p> <h2 class="mt-2 text-3xl font-semibold tracking-tight">Послуги безкоштовні при купівлі апарата</h2> <p class="mt-3 max-w-xl text-muted">
+Обери обстеження і модель. Якщо стоїть хоч один апарат — усі послуги в сумі стають 0 грн.
+</p> <div class="mt-10 grid gap-8 lg:grid-cols-[1fr_280px]"> <div> <h3 class="text-sm font-semibold">Послуги</h3> <div id="services" class="mt-3 grid gap-3 sm:grid-cols-3"></div> <h3 class="mt-8 text-sm font-semibold">Слуховий апарат</h3> <div id="devices" class="mt-3 grid gap-3 sm:grid-cols-3"></div> </div> <aside class="h-fit rounded-2xl border border-line bg-paper p-5"> <p class="text-sm text-muted">Разом</p> <p id="sum" class="mt-1 text-3xl font-semibold">0 грн</p> <p id="note" class="mt-2 text-sm text-leaf"></p> <a href="#book" class="mt-5 block rounded-full bg-leaf py-3 text-center text-sm font-semibold text-white hover:bg-leaf-2">
+Записатись з цим розрахунком
+</a> </aside> </div> </div> </section> <section id="doctor" class="mx-auto max-w-5xl px-5 py-16"> <p class="text-xs font-semibold uppercase tracking-[0.18em] text-leaf">Фахівець</p> <h2 class="mt-2 text-3xl font-semibold tracking-tight">Вигаданий лікар для макета</h2> <p class="mt-3 max-w-xl text-muted">
+На бойовому сайті тут фото, стаж і посилання на запис у зовнішній системі на кшталт Klinica. У демо — лише блок, щоб була структура лендінгу.
+</p> </section> <section id="book" class="border-t border-line bg-white"> <div class="mx-auto max-w-md px-5 py-16"> <h2 class="text-3xl font-semibold tracking-tight">Запис</h2> <p class="mt-2 text-sm text-muted">Демо-форма: заявка нікуди не йде. На проді — Telegram / CRM / віджет телефонії.</p> <form id="form" class="mt-8 grid gap-4"> <label class="grid gap-1 text-sm">
+Ім’я
+<input required name="name" class="rounded-xl border border-line bg-paper px-3 py-3"> </label> <label class="grid gap-1 text-sm">
+Телефон
+<input required name="phone" type="tel" placeholder="+380" class="rounded-xl border border-line bg-paper px-3 py-3"> </label> <label class="flex items-start gap-2 text-sm text-muted"> <input required type="checkbox" class="mt-1">
+Згоден на обробку персональних даних (демо GDPR / згода).
+</label> <button class="rounded-full bg-leaf py-3 text-sm font-semibold text-white hover:bg-leaf-2" type="submit">
+Надіслати
+</button> <p id="formOk" class="hidden text-sm text-leaf">Дякую. У демо заявка не відправляється.</p> </form> </div> </section> </main> <footer class="border-t border-line"> <div class="mx-auto max-w-5xl px-5 py-10 text-sm text-muted"> <p>
+Реклама. Це навчальний лендінг, не заклад охорони здоров’я. Не є публічною офертою і не замінює консультацію лікаря.
+        Знижки в калькуляторі — приклад логіки, не комерційна пропозиція. Відповідно до вимог щодо реклами медичних послуг
+        на бойовому сайті текст дисклеймера узгоджує замовник / юрист.
+</p> <p class="mt-4">Чути · демо для портфоліо · Astro + Tailwind</p> </div> </footer> <script>
+    const services = [
+      { id: "consult", name: "Консультація", price: 800 },
+      { id: "audio", name: "Аудіометрія", price: 1200 },
+      { id: "tymp", name: "Тимпанометрія", price: 900 },
+    ];
+    const devices = [
+      { id: "day", name: "Апарат «День»", price: 18900 },
+      { id: "plus", name: "Апарат «Плюс»", price: 27400 },
+      { id: "pro", name: "Апарат «Про»", price: 41200 },
+    ];
+
+    const picked = { services: new Set(), device: "" };
+
+    function money(n) {
+      return n.toLocaleString("uk-UA") + " грн";
+    }
+
+    function card(item, group) {
+      const on =
+        group === "device" ? picked.device === item.id : picked.services.has(item.id);
+      return `<button type="button" data-group="${group}" data-id="${item.id}"
+        class="rounded-2xl border px-4 py-3 text-left text-sm ${on ? "border-leaf bg-paper" : "border-line bg-white"}">
+        <span class="block font-semibold">${item.name}</span>
+        <span class="text-muted">${money(item.price)}</span>
+      </button>`;
+    }
+
+    function paint() {
+      document.getElementById("services").innerHTML = services.map((s) => card(s, "service")).join("");
+      document.getElementById("devices").innerHTML = devices.map((d) => card(d, "device")).join("");
+      const hasDevice = Boolean(picked.device);
+      const serviceSum = hasDevice
+        ? 0
+        : services.filter((s) => picked.services.has(s.id)).reduce((a, s) => a + s.price, 0);
+      const deviceSum = devices.find((d) => d.id === picked.device)?.price || 0;
+      document.getElementById("sum").textContent = money(serviceSum + deviceSum);
+      document.getElementById("note").textContent = hasDevice
+        ? "Послуги = 0 грн, бо обрано апарат"
+        : "Додай апарат — послуги стануть безкоштовними";
+    }
+
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-group]");
+      if (!btn) return;
+      const { group, id } = btn.dataset;
+      if (group === "service") {
+        if (picked.services.has(id)) picked.services.delete(id);
+        else picked.services.add(id);
+      } else {
+        picked.device = picked.device === id ? "" : id;
+      }
+      paint();
+    });
+
+    document.getElementById("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("formOk").classList.remove("hidden");
+    });
+
+    paint();
+  </script>  </body></html>

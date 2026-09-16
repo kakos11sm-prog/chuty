@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://kakos11sm-prog.github.io",
   base: "/chuty",
+  build: {
+    assets: "assets",
+  },
   vite: {
     plugins: [tailwindcss()],
   },

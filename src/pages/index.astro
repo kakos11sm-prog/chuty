@@ -2,197 +2,198 @@
 import Layout from "../layouts/Layout.astro";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-
 const services = [
   { id: "consult", name: "Консультація", desc: "30 хв зі спеціалістом", price: 800 },
   { id: "audio", name: "Аудіометрія", desc: "Перевірка порогів слуху", price: 1200 },
-  { id: "tymp", name: "Тимпанометрія", desc: "Стан барабанної перетинки", price: 900 },
+  { id: "tymp", name: "Тимпанометрія", desc: "Барабанна перетинка", price: 900 },
 ];
 const devices = [
-  { id: "day", name: "Апарат «День»", desc: "Для розмови й вулиці", price: 18900 },
-  { id: "plus", name: "Апарат «Плюс»", desc: "Шум, робота, транспорт", price: 27400 },
-  { id: "pro", name: "Апарат «Про»", desc: "Преміум, Bluetooth", price: 41200 },
+  { id: "day", name: "Апарат «День»", desc: "Розмова і вулиця", price: 18900 },
+  { id: "plus", name: "Апарат «Плюс»", desc: "Шум і транспорт", price: 27400 },
+  { id: "pro", name: "Апарат «Про»", desc: "Bluetooth, преміум", price: 41200 },
 ];
 ---
 
 <Layout>
-  <header class="sticky top-0 z-20 border-b border-line bg-paper/95">
-    <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-3">
-      <a href={`${base}/`} class="flex items-center gap-2 text-lg font-semibold tracking-tight">
-        <span class="grid h-8 w-8 place-items-center rounded-lg bg-leaf text-xs text-white">Ч</span>
-        Чути
-      </a>
-      <nav class="hidden items-center gap-6 text-sm text-muted md:flex">
-        <a class="hover:text-ink" href="#benefits">Переваги</a>
-        <a class="hover:text-ink" href="#calc">Калькулятор</a>
-        <a class="hover:text-ink" href="#doctor">Лікар</a>
-        <a class="hover:text-ink" href="#book">Запис</a>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="logo" href={`${base}/`}><span class="mark">Ч</span>Чути</a>
+      <nav class="nav">
+        <a href="#how">Як це працює</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#doctor">Лікар</a>
+        <a href="#book">Запис</a>
       </nav>
-      <a href="#book" class="rounded-full bg-leaf px-4 py-2 text-sm font-semibold text-white hover:bg-leaf-2">Записатись</a>
+      <a class="btn" href="#book">Записатись</a>
     </div>
   </header>
 
   <main>
-    <section class="mx-auto grid max-w-5xl items-center gap-10 px-5 py-12 md:grid-cols-2 md:py-16">
+    <section class="wrap hero">
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-leaf">Київ · демо-лендінг · не клініка</p>
-        <h1 class="mt-3 max-w-lg text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl">
-          Слух перевіряємо. Апарат ставимо. Послуги тоді — 0 грн.
-        </h1>
-        <p class="mt-4 max-w-md text-base leading-relaxed text-muted">
-          Обери обстеження і модель у калькуляторі. Якщо в рахунку є апарат, консультація й аналізи обнуляються.
-        </p>
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#calc" class="rounded-full bg-leaf px-5 py-3 text-sm font-semibold text-white hover:bg-leaf-2">Порахувати візит</a>
-          <a href="#book" class="rounded-full border border-line bg-white px-5 py-3 text-sm font-semibold hover:border-ink">Залишити телефон</a>
+        <p class="eyebrow">Київ · перевірка слуху · демо</p>
+        <h1>Почуєте знову. Послуги — у подарунок до апарата.</h1>
+        <p class="lede">Оберіть обстеження і модель. Якщо в рахунку є слуховий апарат, консультація й аналізи стають 0 грн — сума рахується одразу.</p>
+        <div class="hero-acts">
+          <a class="btn" href="#calc">Порахувати візит</a>
+          <a class="btn btn-ghost" href="#book">Залишити телефон</a>
         </div>
-        <dl class="mt-8 grid max-w-md grid-cols-3 gap-3 text-center">
-          <div class="rounded-2xl border border-line bg-white px-2 py-3">
-            <dt class="text-xs text-muted">Слот</dt>
-            <dd class="mt-1 text-sm font-semibold">45 хв</dd>
-          </div>
-          <div class="rounded-2xl border border-line bg-white px-2 py-3">
-            <dt class="text-xs text-muted">Графік</dt>
-            <dd class="mt-1 text-sm font-semibold">9–18</dd>
-          </div>
-          <div class="rounded-2xl border border-line bg-white px-2 py-3">
-            <dt class="text-xs text-muted">Мова</dt>
-            <dd class="mt-1 text-sm font-semibold">українська</dd>
-          </div>
+        <dl class="facts">
+          <div><dt>Візит</dt><dd>45 хв</dd></div>
+          <div><dt>Графік</dt><dd>9:00–18:00</dd></div>
+          <div><dt>Мова</dt><dd>українська</dd></div>
         </dl>
       </div>
-      <div class="hero-art relative overflow-hidden p-8 text-white">
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">Приклад рахунку</p>
-        <p class="mt-3 text-3xl font-semibold">Послуги 0 грн</p>
-        <p class="mt-1 text-sm text-white/75">бо в розрахунку стоїть апарат</p>
-        <ul class="mt-8 space-y-3 text-sm">
-          <li class="flex justify-between border-b border-white/15 pb-2"><span>Консультація</span><span>0 грн</span></li>
-          <li class="flex justify-between border-b border-white/15 pb-2"><span>Аудіометрія</span><span>0 грн</span></li>
-          <li class="flex justify-between"><span>Апарат «День»</span><span>18 900 грн</span></li>
+      <aside class="bill">
+        <svg width="220" height="160" viewBox="0 0 220 160" aria-hidden="true">
+          <path fill="none" stroke="#fff" stroke-width="10" d="M10 80c20-40 40-40 60 0s40 40 60 0 40-40 60 0 20 40 20 40" />
+        </svg>
+        <p class="eyebrow" style="color:#b7e6d6">Приклад рахунку</p>
+        <p style="margin:0;font:500 2rem/1.15 var(--serif)">Послуги 0 грн</p>
+        <p style="margin:8px 0 0;opacity:.8">бо в розрахунку стоїть апарат</p>
+        <ul>
+          <li><span>Консультація</span><span>0 грн</span></li>
+          <li><span>Аудіометрія</span><span>0 грн</span></li>
+          <li><span>Апарат «День»</span><span>18 900 грн</span></li>
         </ul>
+      </aside>
+    </section>
+
+    <section class="band" id="how">
+      <div class="wrap cards">
+        <article class="card">
+          <span class="num">1</span>
+          <b>Перевірка</b>
+          <p>Консультація, аудіометрія, тимпанометрія — ставиш галочки в калькуляторі.</p>
+        </article>
+        <article class="card">
+          <span class="num">2</span>
+          <b>Апарат</b>
+          <p>Обираєш одну модель. Послуги в сумі одразу обнуляються.</p>
+        </article>
+        <article class="card">
+          <span class="num">3</span>
+          <b>Запис</b>
+          <p>Телефон у формі. На живому сайті це йшло б у Telegram або віджет клініки.</p>
+        </article>
       </div>
     </section>
 
-    <section id="benefits" class="border-y border-line bg-white">
-      <div class="mx-auto grid max-w-5xl gap-4 px-5 py-12 sm:grid-cols-3">
-        <article class="rounded-2xl border border-line bg-paper p-5">
-          <p class="text-sm font-semibold">Один візит</p>
-          <p class="mt-2 text-sm leading-relaxed text-muted">Перевірка, підбір і розрахунок на одній сторінці — без «напишіть у директ».</p>
-        </article>
-        <article class="rounded-2xl border border-line bg-paper p-5">
-          <p class="text-sm font-semibold">Знижка в калькуляторі</p>
-          <p class="mt-2 text-sm leading-relaxed text-muted">Апарат у рахунку → послуги автоматично 0 грн. Логіка як у рекламному ТЗ.</p>
-        </article>
-        <article class="rounded-2xl border border-line bg-paper p-5">
-          <p class="text-sm font-semibold">Швидка сторінка</p>
-          <p class="mt-2 text-sm leading-relaxed text-muted">Astro, без важких фото й зайвого JS — під оцінку PageSpeed.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="calc" class="mx-auto max-w-5xl px-5 py-16">
-      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-leaf">Калькулятор</p>
-      <h2 class="mt-2 max-w-xl text-3xl font-semibold tracking-tight">Склади візит. Апарат обнуляє послуги.</h2>
-      <p class="mt-3 max-w-xl text-muted">Натисни картки. Можна кілька обстежень і одну модель апарата.</p>
-
-      <div class="mt-10 grid gap-8 lg:grid-cols-[1fr_260px]">
+    <section class="wrap block" id="calc">
+      <p class="eyebrow">Калькулятор</p>
+      <h2>Складіть візит. Апарат закриває послуги.</h2>
+      <p class="lede">Натисніть картки. Можна кілька обстежень і одну модель.</p>
+      <div class="calc">
         <div>
-          <h3 class="text-sm font-semibold">Послуги</h3>
-          <div class="mt-3 grid gap-3 sm:grid-cols-3">
+          <b>Послуги</b>
+          <div class="grid3">
             {services.map((s) => (
               <button type="button" class="pick" data-group="service" data-id={s.id} data-price={s.price}>
-                <span class="font-semibold">{s.name}</span>
-                <span class="text-sm text-muted">{s.desc}</span>
-                <span class="text-sm font-semibold text-leaf">{s.price.toLocaleString("uk-UA")} грн</span>
+                <b>{s.name}</b>
+                <span style="color:var(--muted);font-size:.88rem">{s.desc}</span>
+                <span style="color:var(--leaf);font-weight:700">{s.price.toLocaleString("uk-UA")} грн</span>
               </button>
             ))}
           </div>
-          <h3 class="mt-8 text-sm font-semibold">Слуховий апарат</h3>
-          <div class="mt-3 grid gap-3 sm:grid-cols-3">
+          <b style="display:block;margin-top:28px">Слуховий апарат</b>
+          <div class="grid3">
             {devices.map((d) => (
               <button type="button" class="pick" data-group="device" data-id={d.id} data-price={d.price}>
-                <span class="font-semibold">{d.name}</span>
-                <span class="text-sm text-muted">{d.desc}</span>
-                <span class="text-sm font-semibold text-leaf">{d.price.toLocaleString("uk-UA")} грн</span>
+                <b>{d.name}</b>
+                <span style="color:var(--muted);font-size:.88rem">{d.desc}</span>
+                <span style="color:var(--leaf);font-weight:700">{d.price.toLocaleString("uk-UA")} грн</span>
               </button>
             ))}
           </div>
         </div>
-        <aside class="h-fit rounded-2xl border border-line bg-white p-5 shadow-[0_12px_32px_rgba(18,36,28,0.06)] lg:sticky lg:top-20">
-          <p class="text-sm text-muted">Разом</p>
-          <p id="sum" class="mt-1 text-3xl font-semibold">0 грн</p>
-          <p id="note" class="mt-2 text-sm text-leaf">Обери послугу або апарат</p>
-          <a href="#book" class="mt-5 block rounded-full bg-leaf py-3 text-center text-sm font-semibold text-white hover:bg-leaf-2">Записатись з цим розрахунком</a>
+        <aside class="total">
+          <span style="color:var(--muted);font-size:.9rem">Разом</span>
+          <strong id="sum">0 грн</strong>
+          <p id="note" style="margin:0 0 16px;color:var(--leaf);font-size:.9rem">Оберіть послугу або апарат</p>
+          <a class="btn" href="#book" style="width:100%">Записатись з цим розрахунком</a>
         </aside>
       </div>
     </section>
 
-    <section id="doctor" class="border-t border-line bg-white">
-      <div class="mx-auto grid max-w-5xl items-center gap-10 px-5 py-16 md:grid-cols-2">
-        <div class="grid h-64 place-items-center rounded-3xl bg-paper text-leaf">
-          <div class="text-center">
-            <div class="mx-auto grid h-24 w-24 place-items-center rounded-full bg-leaf text-3xl font-semibold text-white">ІП</div>
-            <p class="mt-4 text-sm font-semibold text-ink">Ірина Петренко</p>
-            <p class="text-sm text-muted">сурдолог · вигаданий персонаж</p>
+    <section class="band">
+      <div class="wrap block doctor" id="doctor">
+        <div class="portrait">
+          <div style="text-align:center">
+            <div class="avatar">ІП</div>
+            <p style="margin:14px 0 0;font-weight:700">Ірина Петренко</p>
+            <p style="margin:4px 0 0;color:var(--muted);font-size:.9rem">сурдолог · персонаж для макета</p>
           </div>
         </div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-leaf">Фахівець</p>
-          <h2 class="mt-2 text-3xl font-semibold tracking-tight">Підбір апарата після перевірки, не «з вітрини»</h2>
-          <ul class="mt-5 space-y-2 text-sm text-muted">
-            <li>— консультація і пороги слуху в одному візиті</li>
-            <li>— пояснення, навіщо модель, не лише ціна</li>
-            <li>— на проді тут було б посилання в сервіс запису клініки</li>
+          <p class="eyebrow">Фахівець</p>
+          <h2>Підбір після перевірки, не з вітрини</h2>
+          <ul class="ticks">
+            <li>Пороги слуху і розмова про побут в одному візиті</li>
+            <li>Пояснення моделі: навіщо, не лише скільки коштує</li>
+            <li>На бойовому сайті тут посилання в сервіс запису клініки</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="book" class="border-t border-line">
-      <div class="mx-auto grid max-w-5xl gap-10 px-5 py-16 md:grid-cols-2">
+    <section class="wrap block">
+      <p class="eyebrow">Питання</p>
+      <h2>Перед записом</h2>
+      <div class="faq">
+        <details open>
+          <summary>Це справжня клініка?</summary>
+          <p>Ні. Це навчальний лендінг для портфоліо: швидкість, калькулятор, форма, дисклеймер.</p>
+        </details>
+        <details>
+          <summary>Чому послуги стають нулем?</summary>
+          <p>Так у ТЗ рекламних лендінгів: купив апарат — діагностика в подарунок. Логіка в калькуляторі.</p>
+        </details>
+        <details>
+          <summary>Де Binotel і запис у клініку?</summary>
+          <p>Для них потрібен кабінет замовника. У демо стоїть форма; скрипт віджета вставляють перед закриттям body.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="band" id="book">
+      <div class="wrap block book">
         <div>
-          <h2 class="text-3xl font-semibold tracking-tight">Запис на перевірку</h2>
-          <p class="mt-3 text-muted">Демо: форма нікуди не пише. На бойовому сайті — Telegram, CRM або віджет Binotel.</p>
-          <p class="mt-6 text-sm">
-            Тел. <span class="font-semibold">+380 00 000 00 00</span><br />
-            Пн–Пт 9:00–18:00 · Київ
-          </p>
+          <p class="eyebrow">Запис</p>
+          <h2>Залиште телефон — передзвонимо</h2>
+          <p class="lede">Демо-форма нікуди не надсилає заявку. На проді це Telegram, CRM або Binotel GetCall.</p>
+          <p><b>+380 00 000 00 00</b><br />Пн–Пт 9:00–18:00 · Київ</p>
         </div>
-        <form id="form" class="grid gap-4 rounded-3xl border border-line bg-white p-6">
-          <label class="grid gap-1 text-sm font-medium">
-            Ім’я
-            <input required name="name" class="rounded-xl border border-line bg-paper px-3 py-3 font-normal" />
-          </label>
-          <label class="grid gap-1 text-sm font-medium">
-            Телефон
-            <input required name="phone" type="tel" placeholder="+380" class="rounded-xl border border-line bg-paper px-3 py-3 font-normal" />
-          </label>
-          <label class="flex items-start gap-2 text-sm font-normal text-muted">
-            <input required type="checkbox" class="mt-1" />
+        <form class="form" id="form">
+          <label>Ім’я<input required name="name" type="text" /></label>
+          <label>Телефон<input required name="phone" type="tel" placeholder="+380" /></label>
+          <label style="display:flex;gap:8px;align-items:flex-start;font-weight:400;color:var(--muted);font-size:.9rem">
+            <input required type="checkbox" style="margin-top:4px" />
             Згоден на обробку персональних даних.
           </label>
-          <button class="rounded-full bg-leaf py-3 text-sm font-semibold text-white hover:bg-leaf-2" type="submit">Надіслати</button>
-          <p id="formOk" class="hidden text-sm text-leaf">Дякую. У демо заявка не відправляється.</p>
+          <button class="btn" type="submit">Надіслати</button>
+          <p id="formOk" hidden style="margin:0;color:var(--leaf)">Дякую. У демо заявка не відправляється.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-line bg-white">
-    <div class="mx-auto max-w-5xl px-5 py-10 text-sm text-muted">
-      <p>
-        Реклама. Навчальний лендінг, не заклад охорони здоров’я. Не є офертою і не замінює консультацію лікаря.
-        Цифри в калькуляторі — приклад логіки знижки.
-      </p>
-      <p class="mt-4">Чути · демо для портфоліо · Astro + Tailwind</p>
+  <footer>
+    <div class="wrap foot">
+      <div class="foot-in">
+        <p>
+          Реклама. Навчальний лендінг, не заклад охорони здоров’я. Не є офертою і не замінює консультацію лікаря.
+          Цифри в калькуляторі — приклад логіки знижки, не комерційна пропозиція.
+        </p>
+        <p>Чути · демо · Astro + Tailwind<br />kakos11sm-prog.github.io/chuty</p>
+      </div>
     </div>
   </footer>
+  <div class="bar-mob"><a class="btn" href="#book" style="width:100%">Записатись</a></div>
 
   <script is:inline>
     function money(n) {
       return n.toLocaleString("uk-UA") + " грн";
     }
-
     function total() {
       const services = [...document.querySelectorAll('[data-group="service"].is-on')];
       const device = document.querySelector('[data-group="device"].is-on');
@@ -202,9 +203,8 @@ const devices = [
       document.getElementById("sum").textContent = money((hasDevice ? 0 : serviceSum) + deviceSum);
       document.getElementById("note").textContent = hasDevice
         ? "Послуги = 0 грн, бо обрано апарат"
-        : "Додай апарат — послуги стануть 0 грн";
+        : "Додайте апарат — послуги стануть 0 грн";
     }
-
     document.addEventListener("click", (e) => {
       const btn = e.target.closest(".pick");
       if (!btn) return;
@@ -216,12 +216,10 @@ const devices = [
       btn.classList.toggle("is-on");
       total();
     });
-
     document.getElementById("form").addEventListener("submit", (e) => {
       e.preventDefault();
-      document.getElementById("formOk").classList.remove("hidden");
+      document.getElementById("formOk").hidden = false;
     });
-
     total();
   </script>
 </Layout>

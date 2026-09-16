@@ -17,227 +17,198 @@ const devices = [
 <Layout>
   <header class="top">
     <div class="wrap top-in">
-      <a class="logo" href={`${base}/`}><span class="mark">Ч</span>Чути</a>
+      <a class="logo" href={`${base}/`}>Чути<span>кабінет слуху</span></a>
       <nav class="nav">
         <a href="#how">Як це працює</a>
         <a href="#calc">Калькулятор</a>
         <a href="#doctor">Лікар</a>
         <a href="#book">Запис</a>
       </nav>
-      <a class="top-phone" href="#book">+380 44 000 11 22</a>
       <a class="btn" href="#book">Записатись</a>
     </div>
   </header>
 
   <main>
-    <section class="wrap hero">
-      <div>
-        <p class="eyebrow">Київ · Поділ · перевірка слуху</p>
-        <h1>Почуєте знову. Обстеження — у подарунок до апарата.</h1>
-        <p class="lede">
-          Оберіть послуги і модель у калькуляторі. Якщо в рахунку є слуховий апарат,
-          консультація й аналізи стають 0 грн — сума оновлюється одразу.
-        </p>
-        <div class="hero-acts">
-          <a class="btn" href="#calc">Порахувати візит</a>
-          <a class="btn btn-ghost" href="#book">Залишити телефон</a>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Київ · перевірка слуху</p>
+          <h1>Почуєте знову. Обстеження — у подарунок до апарата.</h1>
+          <p class="lede">
+            Оберіть послуги і модель. Якщо в рахунку є слуховий апарат,
+            консультація й аналізи стають 0 грн — сума рахується одразу.
+          </p>
+          <div class="hero-acts">
+            <a class="btn" href="#calc">Порахувати візит</a>
+            <a class="btn btn-ghost" href="#book">Залишити телефон</a>
+          </div>
+          <p class="meta">
+            <span><b>45 хв</b> візит</span>
+            <span><b>9:00–18:00</b> будні</span>
+            <span><b>українською</b></span>
+          </p>
         </div>
-        <dl class="facts">
-          <div><dt>Візит</dt><dd>45 хв</dd></div>
-          <div><dt>Графік</dt><dd>9:00–18:00</dd></div>
-          <div><dt>Мова</dt><dd>українська</dd></div>
-        </dl>
+        <aside class="chart" aria-hidden="true">
+          <div class="chart-top"><span>Аудіограма · приклад</span><span>Hz</span></div>
+          <svg viewBox="0 0 440 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="#2e3330" stroke-width="1">
+              <path d="M48 16h372M48 56h372M48 96h372M48 136h372M48 176h372" />
+              <path d="M80 16v160M140 16v160M200 16v160M260 16v160M320 16v160M380 16v160" />
+            </g>
+            <path fill="none" stroke="#c4a574" stroke-width="1.75" d="M80 44 L140 58 L200 74 L260 66 L320 92 L380 84" />
+            <g fill="#ebe4d4">
+              <circle cx="80" cy="44" r="3.5" />
+              <circle cx="140" cy="58" r="3.5" />
+              <circle cx="200" cy="74" r="3.5" />
+              <circle cx="260" cy="66" r="3.5" />
+              <circle cx="320" cy="92" r="3.5" />
+              <circle cx="380" cy="84" r="3.5" />
+            </g>
+            <g fill="#7a756c" font-size="10" font-family="IBM Plex Sans, sans-serif">
+              <text x="8" y="20">0</text>
+              <text x="8" y="60">20</text>
+              <text x="8" y="100">40</text>
+              <text x="8" y="140">60</text>
+              <text x="8" y="180">dB</text>
+              <text x="72" y="208">250</text>
+              <text x="128" y="208">500</text>
+              <text x="190" y="208">1k</text>
+              <text x="248" y="208">2k</text>
+              <text x="308" y="208">4k</text>
+              <text x="368" y="208">8k</text>
+            </g>
+          </svg>
+          <div class="chart-sum">
+            <span>Разом з апаратом «День»</span>
+            <strong>18 900 грн</strong>
+          </div>
+        </aside>
       </div>
-      <aside class="bill">
-        <svg class="wave" width="260" height="180" viewBox="0 0 260 180" aria-hidden="true">
-          <path fill="none" stroke="#fff" stroke-width="8" d="M10 90c24-48 48-48 72 0s48 48 72 0 48-48 72 0 24 48 24 48" />
-          <path fill="none" stroke="#fff" stroke-width="5" opacity="0.5" d="M10 120c24-32 48-32 72 0s48 32 72 0 48-32 72 0" />
-        </svg>
-        <p class="eyebrow" style="color:#b7e6d6">Приклад рахунку</p>
-        <p style="margin:0;font:500 2rem/1.15 var(--serif)">Послуги 0 грн</p>
-        <p style="margin:8px 0 0;opacity:.8">бо в розрахунку стоїть апарат</p>
-        <ul>
-          <li><span>Консультація</span><span class="zero">0 грн</span></li>
-          <li><span>Аудіометрія</span><span class="zero">0 грн</span></li>
-          <li><span>Апарат «День»</span><span>18 900 грн</span></li>
-        </ul>
-      </aside>
     </section>
 
-    <section class="wrap" style="padding-bottom:48px">
-      <div class="trust">
-        <div>
-          <div>
-            <b>4.9 / 5</b>
-            <span class="stars">★★★★★</span>
-            <span>180 відгуків після візиту</span>
-          </div>
-        </div>
-        <div>
-          <div>
-            <b>12 років</b>
-            <span>підбір апаратів у Києві</span>
-          </div>
-        </div>
-        <div>
-          <div>
-            <b>45 хвилин</b>
-            <span>перевірка + розмова про побут</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="how">
-      <div class="wrap cards">
-        <article class="card">
-          <span class="num">1</span>
+    <section class="band-how" id="how">
+      <div class="wrap strip">
+        <article>
+          <span class="n">01</span>
           <b>Перевірка</b>
-          <p>Консультація, аудіометрія, тимпанометрія — відмічаєте в калькуляторі, що потрібно.</p>
+          <p>Консультація, аудіометрія, тимпанометрія — відмічаєте в калькуляторі.</p>
         </article>
-        <article class="card">
-          <span class="num">2</span>
+        <article>
+          <span class="n">02</span>
           <b>Апарат</b>
-          <p>Обираєте одну модель. Послуги в сумі одразу обнуляються — акція на екрані, не дрібним шрифтом.</p>
+          <p>Одна модель. Послуги в сумі одразу стають нулем — акція на екрані.</p>
         </article>
-        <article class="card">
-          <span class="num">3</span>
+        <article>
+          <span class="n">03</span>
           <b>Запис</b>
-          <p>Телефон у формі. Передзвонимо, узгодимо час, підкажемо, що взяти з собою.</p>
+          <p>Телефон у формі. Передзвонимо, узгодимо час, скажемо що взяти з собою.</p>
         </article>
       </div>
     </section>
 
     <section class="wrap block" id="calc">
-      <p class="eyebrow">Калькулятор</p>
+      <p class="kicker">Калькулятор</p>
       <h2>Складіть візит. Апарат закриває послуги.</h2>
-      <p class="lede">Можна кілька обстежень і одну модель. Цифри — приклад логіки знижки.</p>
-      <div class="calc">
+      <p class="lede lede-ink">Кілька обстежень і одна модель. Без апарата послуги за прайсом.</p>
+      <div class="calc has-device">
         <div>
-          <b>Послуги</b>
-          <div class="grid3">
+          <p class="group-title"><span>Послуги</span><span>грн</span></p>
+          <div class="picks">
             {services.map((s) => (
               <button type="button" class:list={["pick", s.on && "is-on"]} data-group="service" data-id={s.id} data-price={s.price}>
-                <b>{s.name}</b>
-                <span style="color:var(--muted);font-size:.88rem">{s.desc}</span>
-                <span style="color:var(--leaf);font-weight:700">{s.price.toLocaleString("uk-UA")} грн</span>
+                <span class="box"></span>
+                <span class="name"><b>{s.name}</b><span>{s.desc}</span></span>
+                <span class="price">
+                  <span class="price-was">{s.price.toLocaleString("uk-UA")}</span>
+                  <span class="price-now">0</span>
+                </span>
               </button>
             ))}
           </div>
-          <b style="display:block;margin-top:28px">Слуховий апарат</b>
-          <div class="grid3">
+          <p class="group-title" style="margin-top:36px"><span>Слуховий апарат</span><span>грн</span></p>
+          <div class="picks">
             {devices.map((d) => (
               <button type="button" class:list={["pick", d.on && "is-on"]} data-group="device" data-id={d.id} data-price={d.price}>
-                <b>{d.name}</b>
-                <span style="color:var(--muted);font-size:.88rem">{d.desc}</span>
-                <span style="color:var(--leaf);font-weight:700">{d.price.toLocaleString("uk-UA")} грн</span>
+                <span class="box"></span>
+                <span class="name"><b>{d.name}</b><span>{d.desc}</span></span>
+                <span class="price">{d.price.toLocaleString("uk-UA")}</span>
               </button>
             ))}
           </div>
         </div>
         <aside class="total">
-          <span style="color:var(--muted);font-size:.9rem">Разом</span>
+          <p class="kicker">Разом</p>
           <strong id="sum">18 900 грн</strong>
-          <p id="note" style="margin:0 0 16px;color:var(--leaf);font-size:.9rem">Послуги = 0 грн, бо обрано апарат</p>
-          <a class="btn" href="#book" style="width:100%">Записатись з цим розрахунком</a>
+          <p id="note">Послуги = 0 грн, бо обрано апарат</p>
+          <a class="btn" href="#book">Записатись з цим розрахунком</a>
         </aside>
       </div>
     </section>
 
-    <section class="band">
-      <div class="wrap block doctor" id="doctor">
-        <div class="portrait" aria-hidden="true">
-          <svg viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="140" cy="318" rx="92" ry="18" fill="#0b6a52" opacity="0.12" />
-            <path d="M54 330c8-78 38-118 86-118s78 40 86 118" fill="#0b6a52" />
-            <path d="M78 318c10-62 28-88 62-88s52 26 62 88" fill="#f7f1e6" />
-            <circle cx="140" cy="118" r="58" fill="#e8c7a8" />
-            <path d="M82 118c8-64 36-92 58-92 28 0 62 38 66 92 0 0-18-28-64-28s-60 28-60 28z" fill="#2c221c" />
-            <path d="M92 108c18-8 36-10 48-4" fill="none" stroke="#2c221c" stroke-width="6" stroke-linecap="round" />
-            <circle cx="122" cy="122" r="5" fill="#1b1714" />
-            <circle cx="160" cy="122" r="5" fill="#1b1714" />
-            <path d="M128 146c8 8 18 8 26 0" fill="none" stroke="#c4896e" stroke-width="3" stroke-linecap="round" />
-            <circle cx="188" cy="168" r="9" fill="none" stroke="#d4af37" stroke-width="4" />
-            <path d="M180 168h-28" stroke="#d4af37" stroke-width="4" />
-          </svg>
+    <section class="wrap block" id="doctor" style="padding-top:0">
+      <p class="kicker">Фахівець</p>
+      <div class="split">
+        <div class="quote-xl">
+          <p>«Підбір після перевірки, не з вітрини. Спочатку пороги слуху і побут — потім модель.»</p>
+          <p class="who"><b>Ірина Петренко</b> сурдолог, прийом у Києві</p>
         </div>
+        <ul class="ticks">
+          <li>Пороги слуху і розмова про побут в одному візиті</li>
+          <li>Пояснення моделі: навіщо вона, не лише скільки коштує</li>
+          <li>Налаштування після видачі — без «забрали й забули»</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap block" style="padding-top:0">
+      <p class="kicker">Відгук</p>
+      <div class="quote-xl">
+        <p>«На кухні знову чую чайник і онука з коридору. Підібрали не найдорожче, а те, що сіло.»</p>
+        <p class="who"><b>Олена, 67</b> після першого тижня з апаратом</p>
+      </div>
+    </section>
+
+    <section class="wrap block" style="padding-top:0">
+      <p class="kicker">Питання</p>
+      <h2>Перед записом</h2>
+      <div class="faq">
+        <details open>
+          <summary>Чи треба направлення?</summary>
+          <p>Ні. Якщо вже є аудіограма до року — візьміть із собою, повторимо за потреби.</p>
+        </details>
+        <details>
+          <summary>Чому послуги стають нулем?</summary>
+          <p>Акція лендінгу: обрали апарат у розрахунку — діагностика в подарунок. Без апарата послуги за прайсом.</p>
+        </details>
+        <details>
+          <summary>Скільки триває візит?</summary>
+          <p>Близько 45 хвилин: розмова, перевірка, примірка. Апарат після налаштування, не з полиці.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="book-band" id="book">
+      <div class="wrap block book">
         <div>
-          <p class="eyebrow">Фахівець</p>
-          <h2>Підбір після перевірки, не з вітрини</h2>
-          <p class="doc-meta"><b>Ірина Петренко</b><span>сурдолог, прийом на Подолі</span></p>
-          <ul class="ticks">
-            <li>Пороги слуху і розмова про побут в одному візиті</li>
-            <li>Пояснення моделі: навіщо вона, не лише скільки коштує</li>
-            <li>Налаштування після видачі — без «забрали й забули»</li>
-          </ul>
+          <p class="kicker">Запис</p>
+          <h2>Залиште телефон — передзвонимо за 15 хвилин</h2>
+          <p class="lede">Узгодимо день і скажемо, чи брати наявну аудіограму.</p>
+          <p class="hours">
+            <b>Пн–Пт 9:00–18:00 · сб 10:00–14:00</b>
+            Київ, кабінет на Подолі
+          </p>
         </div>
+        <form class="form" id="form">
+          <label>Ім’я<input required name="name" type="text" autocomplete="name" /></label>
+          <label>Телефон<input required name="phone" type="tel" placeholder="+380" autocomplete="tel" /></label>
+          <label class="check">
+            <input required type="checkbox" />
+            Згоден на обробку персональних даних для запису на прийом.
+          </label>
+          <button class="btn" type="submit">Надіслати заявку</button>
+          <p id="formOk" hidden style="margin:0;color:var(--copper)">Дякую. Передзвонимо в робочі години.</p>
+        </form>
       </div>
-    </section>
-
-    <section class="wrap block">
-      <p class="eyebrow">Відгуки</p>
-      <h2>Після першого тижня з апаратом</h2>
-      <div class="quotes">
-        <article class="quote">
-          <span class="stars">★★★★★</span>
-          <p>«На кухні знову чую чайник і онука з коридору. Підібрали не найдорожче, а те, що сіло.»</p>
-          <small>Олена, 67 · Поділ</small>
-        </article>
-        <article class="quote">
-          <span class="stars">★★★★★</span>
-          <p>«Думав, що калькулятор — реклама. На візиті так і вийшло: обстеження закрили апаратом.»</p>
-          <small>Микола, 71 · Оболонь</small>
-        </article>
-        <article class="quote">
-          <span class="stars">★★★★☆</span>
-          <p>«Пояснили без поспіху. Мінус зірка лише за чергу в суботу — записуйтесь на ранок.»</p>
-          <small>Галина, 64 · Святошин</small>
-        </article>
-      </div>
-    </section>
-
-    <section class="band">
-      <div class="wrap block">
-        <p class="eyebrow">Питання</p>
-        <h2>Перед записом</h2>
-        <div class="faq">
-          <details open>
-            <summary>Чи треба направлення?</summary>
-            <p>Ні. Приходьте з паспортом. Якщо вже є аудіограма до року — візьміть із собою, повторимо за потреби.</p>
-          </details>
-          <details>
-            <summary>Чому послуги стають нулем?</summary>
-            <p>Акція лендінгу: обрали апарат у розрахунку — діагностика в подарунок. Без апарата послуги рахуються за прайсом.</p>
-          </details>
-          <details>
-            <summary>Скільки триває візит?</summary>
-            <p>Близько 45 хвилин: розмова, перевірка, примірка. Апарат забираєте після налаштування, не «з полиці».</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap block book" id="book">
-      <div>
-        <p class="eyebrow">Запис</p>
-        <h2>Залиште телефон — передзвонимо за 15 хвилин</h2>
-        <p class="lede">Узгодимо день і скажемо, чи брати наявну аудіограму. Без спаму в месенджери.</p>
-        <div class="hours">
-          <b>+380 44 000 11 22</b>
-          Пн–Пт 9:00–18:00 · сб 10:00–14:00<br />
-          Київ, Поділ, вул. Хорива, 12
-        </div>
-      </div>
-      <form class="form" id="form">
-        <label>Ім’я<input required name="name" type="text" autocomplete="name" /></label>
-        <label>Телефон<input required name="phone" type="tel" placeholder="+380" autocomplete="tel" /></label>
-        <label class="check">
-          <input required type="checkbox" />
-          Згоден на обробку персональних даних для запису на прийом.
-        </label>
-        <button class="btn" type="submit">Надіслати заявку</button>
-        <p id="formOk" hidden style="margin:0;color:var(--leaf)">Дякую. Заявку прийнято — передзвонимо в робочі години.</p>
-      </form>
     </section>
   </main>
 
@@ -247,21 +218,23 @@ const devices = [
         Реклама. Навчальний лендінг «Чути», не заклад охорони здоров’я. Не є офертою
         і не замінює консультацію лікаря. Цифри в калькуляторі — приклад логіки знижки.
       </p>
-      <p>Чути · Київ<br /><a href={`${base}/`}>kakos11sm-prog.github.io/chuty</a></p>
+      <p>Чути · Київ</p>
     </div>
   </footer>
-  <div class="bar-mob"><a class="btn" href="#book">Записатись · 15 хв на дзвінок</a></div>
+  <div class="bar-mob"><a class="btn" href="#book">Записатись</a></div>
 
   <script is:inline>
     function money(n) {
       return n.toLocaleString("uk-UA") + " грн";
     }
     function total() {
+      const root = document.querySelector(".calc");
       const services = [...document.querySelectorAll('[data-group="service"].is-on')];
       const device = document.querySelector('[data-group="device"].is-on');
       const serviceSum = services.reduce((a, el) => a + Number(el.dataset.price), 0);
       const deviceSum = device ? Number(device.dataset.price) : 0;
       const hasDevice = Boolean(device);
+      root.classList.toggle("has-device", hasDevice);
       document.getElementById("sum").textContent = money((hasDevice ? 0 : serviceSum) + deviceSum);
       document.getElementById("note").textContent = hasDevice
         ? "Послуги = 0 грн, бо обрано апарат"

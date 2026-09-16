@@ -1,21 +1,21 @@
 ---
 import "../styles/global.css";
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 <!DOCTYPE html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Чути — кабінет слуху · демо лендінг</title>
+    <title>Чути — кабінет слуху в Києві</title>
     <meta
       name="description"
-      content="Демо швидкого лендінгу: калькулятор, запис, дисклеймер. Не медична клініка."
+      content="Перевірка слуху, підбір апарата, калькулятор візиту. Послуги в подарунок, якщо обираєте апарат."
     />
-    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
   </head>
-  <body class="antialiased">
+  <body>
     <slot />
   </body>
 </html>
